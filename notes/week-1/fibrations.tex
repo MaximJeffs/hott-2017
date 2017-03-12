@@ -8,7 +8,7 @@
 \newtheorem{exercise}{Exercise}
 \newtheorem{definition}{Definition}
 
-\title{Note on Fibrations}
+\title{Fibrations in Topology and Logic: An Introduction to Homotopy Type Theory}
 \author{Maxim Jeffs}
 \date{\today}
 
@@ -29,7 +29,7 @@ The most important example of a fibre bundle is the \textit{trivial bundle} $E =
 A key property of fibre bundles is the following:
 
 \begin{theorem} 
-(Homotopy Lifting Property) Suppose $Y$ is a CW complex, and let $h: Y \times I \to B$ be a given homotopy between maps $f,g: Y \to B$. Then, given any lift of the map $f: Y \times \{0\} \to B$ to a map $\tilde{f}: Y \times \{0\} \to B$, there exists a lift of the homotopy $\tilde{h}: Y \times I \to E$ with $\tilde{h}$ restricted to $Y \times \{0\}$ equal to $\tilde{f}$. 
+(Homotopy Lifting Property) Suppose $\pi: E \to B$ is a fibre bundle and $Y$ is a CW complex. Let $h: Y \times I \to B$ be a given homotopy between two maps $f,g: Y \to B$. Then, given any lift of the map $f: Y \times \{0\} \to B$ to a map $\tilde{f}: Y \times \{0\} \to B$, there exists a lift of the homotopy $\tilde{h}: Y \times I \to E$ with $\tilde{h}$ restricted to $Y \times \{0\}$ equal to $\tilde{f}$. 
 \end{theorem}
 We say that a fibre bundle has the \textit{homotopy lifting property} (HLP) with respect to all CW complexes $Y$. This theorem may be equivalently phrased as saying that in any commutative diagram of the form below, there exists a dashed arrow that makes the diagram commute.
 \begin{center}
@@ -52,7 +52,7 @@ A fibration is a surjective map $\pi: E \to B$  that has the homotopy lifting pr
 \end{definition}
 The related notion of a \textit{Hurewicz fibration} is defined to be a map $\pi : E \to B$ having the HLP with respect to \textit{all} spaces $Y$. 
 
-Evidently, all fibre bundles are Serre fibrations; fibre bundles over `paracompact' base spaces are also Hurewicz fibrations. It is also clear from this definition that all covering spaces are fibrations, since they satisfy the HLP but with a \textit{unique} lift of every homotopy. Another example that will be of importance later is the \textit{path fibration}. If $(X,x_0)$ is a path-connected space, then the set $PX$ of maps $\gamma: I \to X$ with $\gamma(0) = x_0$ can be given a topology in such a way that the map $PX \to X$ given by $\gamma \mapsto \gamma(1)$ is a fibration. This is called the \textit{path-loop fibration} because the homotopy fibre over the basepoint $x_0$ is the loopspace $\Omega X$.
+Evidently, all fibre bundles are Serre fibrations; fibre bundles over `paracompact' base spaces are also Hurewicz fibrations. It is also clear from this definition that all covering spaces are fibrations, since they satisfy the HLP but with a \textit{unique} lift of every homotopy. Another example that will be of importance later is the \textit{path-loop fibration}. If $(X,x_0)$ is a path-connected space, then the set $PX$ of maps $\gamma: I \to X$ with $\gamma(0) = x_0$ can be given a topology in such a way that the map $PX \to X$ given by $\gamma \mapsto \gamma(1)$ is a fibration. This is called the path-loop fibration because the fibre of $\pi$ over the basepoint $x_0$ is the loopspace $\Omega X$.
 
 A fibration $\pi: E \to B$ has a well-defined `homotopy fibre' whenever $B$ is path-connected, that is, all of the spaces $\pi^{-1}(b)$ are homotopy equivalent. To see this, let $b, b\dash$ be two points in $B$, take $f: \pi\inv(b) \to E$ be the inclusion of the fibre $\pi^{-1}(b) \to E$, and take a path $\gamma$ from $b$ to $b\dash$. Then we have a lift in the diagram
 \begin{center}
@@ -78,7 +78,7 @@ Suppose $\pi: E \to B$ is a fibration with homotopy fibre $F$. Then there exists
 \end{theorem}
 
 \begin{exercise}
-Use the long exact sequence in homotopy groups for the Hopf fibration to show that $\pi_3(S^2) \cong \mathbb{Z}$. 
+Use the long exact sequence in homotopy groups for the Hopf fibration to show that $\pi_3(S^2) \cong \mathbb{Z}$. You will need to use the fact that the higher homotopy groups of $S^1$ vanish, which you can prove by lifting to the universal covering space, as well as the fact that $\pi_n(S^n) \cong \mathbb{Z}$.
 \end{exercise}
 
 \section*{Appendix: Equivalent Definitions}
@@ -95,7 +95,7 @@ X \arrow{r}{h}\arrow[dashed]{ur}{\exists} & B
 \end{center}
 \end{definition}
 
-We also say that a fibration $\pi: E \to B$ is \textit{acyclic} if the homotopy fibre is contractible. By the long exact sequence in homotopy groups, this means that $\pi$ induces a weak homotopy equivalence between $E$ and $B$.
+We also say that a fibration $\pi: E \to B$ is \textit{acyclic} if the homotopy fibre is weakly contractible. By the long exact sequence in homotopy groups, this means that $\pi$ induces a weak homotopy equivalence between $E$ and $B$.
 
 \begin{theorem}
 For a surjective map $\pi: E \to B$, the following are equivalent:
